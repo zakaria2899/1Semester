@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox minHeight="250.0" minWidth="800.0" prefHeight="250.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sep1a233group.bobsprojectmanagementsystem.SubScene_FilterProjectsView">
+   <children>
+      <VBox alignment="TOP_CENTER" minHeight="203.0" minWidth="700.0" prefHeight="203.0" prefWidth="800.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="45.0" text="Filter Projects">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <VBox alignment="CENTER" prefHeight="155.0" prefWidth="800.0">
+               <children>
+                  <GridPane alignment="CENTER" layoutX="10.0" layoutY="387.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="125.0" percentWidth="17.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="80.0" percentWidth="15.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="80.0" percentWidth="14.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="50.0" percentWidth="10.0" prefWidth="50.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" percentWidth="20.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="5.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <TextField fx:id="budgetRangeMin" onKeyReleased="#enableSetFiltersButton" promptText="Min. $" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="2.5" left="5.0" right="2.5" top="2.5" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="durationMin" onKeyReleased="#enableSetFiltersButton" promptText="Min. months" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="2.5" left="5.0" right="2.5" top="2.5" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="ownerPhoneNumber" onKeyReleased="#enableSetFiltersButton" promptText="tlf. (No prefix)" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets bottom="2.5" left="5.0" right="2.5" top="2.5" />
+                           </GridPane.margin>
+                        </TextField>
+                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="360.0" layoutY="47.0" prefHeight="17.0" prefWidth="135.0" text="Budget Range" textAlignment="RIGHT" />
+                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="360.0" layoutY="47.0" prefHeight="17.0" prefWidth="135.0" text="Project Length" textAlignment="RIGHT" GridPane.rowIndex="1" />
+                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="135.0" text="Owner Phone Number" textAlignment="RIGHT" GridPane.rowIndex="2" />
+                        <CheckBox fx:id="residentialProject" mnemonicParsing="false" GridPane.columnIndex="5" />
+                        <CheckBox fx:id="commercialProject" mnemonicParsing="false" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                        <CheckBox fx:id="industrialProject" mnemonicParsing="false" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                        <CheckBox fx:id="roadBuildingProject" mnemonicParsing="false" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                        <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="153.0" text="Hide residential Projects" GridPane.columnIndex="4" />
+                        <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="155.0" text="Hide commercial Projects" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                        <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="156.0" text="Hide industrial Projects" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                        <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="157.0" text="Hide road Building Projects" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                        <TextField fx:id="budgetRangeMax" layoutX="199.0" layoutY="12.0" onKeyReleased="#enableSetFiltersButton" promptText="Max. $" GridPane.columnIndex="2" />
+                        <TextField fx:id="durationMax" layoutX="199.0" layoutY="43.0" onKeyReleased="#enableSetFiltersButton" promptText="Max. months" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="586.0" layoutY="107.0" prefHeight="17.0" prefWidth="135.0" text="Hide finished projects?" textAlignment="RIGHT" GridPane.rowIndex="3" />
+                        <CheckBox fx:id="hideFinishedProjects" layoutX="706.0" layoutY="107.0" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </CheckBox>
+                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="74.0" layoutY="107.0" prefHeight="17.0" prefWidth="135.0" text="Hide ongoing projects?" textAlignment="RIGHT" GridPane.rowIndex="4" />
+                        <CheckBox fx:id="hideOngoingProjects" layoutX="210.0" layoutY="107.0" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </CheckBox>
+                     </children>
+                  </GridPane>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" prefHeight="37.0" prefWidth="500.0">
+         <VBox.margin>
+            <Insets bottom="2.5" top="2.5" />
+         </VBox.margin>
+         <children>
+            <Button fx:id="buttonSetFilters" defaultButton="true" disable="true" focusTraversable="false" maxHeight="30.0" maxWidth="120.0" minHeight="30.0" minWidth="120.0" mnemonicParsing="false" onAction="#setFiltersButton" prefHeight="30.0" prefWidth="120.0" text="Save Changes" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="25.0" right="50.0" />
+               </HBox.margin>
+            </Button>
+            <Button focusTraversable="false" maxHeight="30.0" maxWidth="120.0" minHeight="30.0" minWidth="120.0" mnemonicParsing="false" onAction="#resetFilters" prefHeight="30.0" prefWidth="120.0" text="Reset Filters" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="50.0" />
+               </HBox.margin>
+            </Button>
+            <Button cancelButton="true" focusTraversable="false" layoutX="498.0" layoutY="14.0" maxHeight="30.0" maxWidth="120.0" minHeight="30.0" minWidth="120.0" mnemonicParsing="false" onAction="#cancel" prefHeight="30.0" prefWidth="120.0" text="Cancel" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>

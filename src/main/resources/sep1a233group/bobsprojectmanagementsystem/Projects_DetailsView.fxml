@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox minHeight="768.0" minWidth="1366.0" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sep1a233group.bobsprojectmanagementsystem.SubScene_DetailsView">
+  <children>
+    <AnchorPane VBox.vgrow="ALWAYS">
+      <children>
+            <VBox minHeight="768.0" minWidth="1366.0" prefHeight="768.0" prefWidth="1366.0">
+               <children>
+                  <HBox VBox.vgrow="ALWAYS">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="646.0" prefWidth="191.0">
+                           <HBox.margin>
+                              <Insets left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                           <children>
+                              <ImageView fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@logoHighResolution.png" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="5.0" right="5.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#openWindow" prefHeight="40.0" prefWidth="140.0" text="Dashboard">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button defaultButton="true" focusTraversable="false" layoutX="13.0" layoutY="10.0" mnemonicParsing="false" onAction="#openWindow" prefHeight="40.0" prefWidth="140.0" text="Projects">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="2.5" top="5.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#exportToWeb" prefHeight="40.0" prefWidth="140.0" text="Export HTML">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="2.5" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button focusTraversable="false" layoutX="24.0" layoutY="101.0" mnemonicParsing="false" onAction="#openWindow" prefHeight="40.0" prefWidth="140.0" text="Settings">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button focusTraversable="false" layoutX="24.0" layoutY="191.0" mnemonicParsing="false" onAction="#exitApplication" prefHeight="40.0" prefWidth="140.0" text="Exit">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" minHeight="646.0" minWidth="1145.0" prefHeight="650.0" prefWidth="1100.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="45.0" text="Project Details">
+                                 <font>
+                                    <Font name="System Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                              <ScrollPane hbarPolicy="NEVER" minHeight="630.0" minWidth="1130.0" prefHeight="1300.0" prefWidth="1130.0">
+                                 <content>
+                                    <AnchorPane minHeight="600.0" minWidth="1130.0" prefHeight="640.0" prefWidth="1130.0">
+                                       <children>
+                                          <VBox prefHeight="630.0" prefWidth="1130.0">
+                                             <children>
+                                                <GridPane fx:id="gridCommonProjectDataContainer" layoutX="10.0" layoutY="387.0">
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" percentWidth="11.5" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" percentWidth="15.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="15.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="5.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" percentWidth="15.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" percentWidth="15.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="15.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="5.0" prefWidth="100.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                   <children>
+                                                      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="298.0" text="Materiel Expenses:" textAlignment="RIGHT" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                                                      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="65.0" prefHeight="17.0" prefWidth="299.0" text="Total budget" textAlignment="RIGHT" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                                                      <TextField editable="false" promptText="Expenses in USD" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                         <GridPane.margin>
+                                                            <Insets bottom="2.5" left="5.0" right="2.5" top="2.5" />
+                                                         </GridPane.margin>
+                                                      </TextField>
+                                                      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="535.0" layoutY="37.0" prefHeight="17.0" prefWidth="301.0" text="Man-Hours spent:" textAlignment="RIGHT" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                                                      <CheckBox contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#checkBoxChecker" prefHeight="17.0" prefWidth="189.0" text="Mark project as completed" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                                                         <GridPane.margin>
+                                                            <Insets bottom="2.5" left="5.0" right="5.0" top="2.5" />
+                                                         </GridPane.margin>
+                                                      </CheckBox>
+                                                      <Label alignment="CENTER" minWidth="1130.0" text="Frequently used data:" textAlignment="CENTER" GridPane.columnSpan="7">
+                                                         <font>
+                                                            <Font name="System Bold" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField editable="false" promptText="Budget in USD" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                         <GridPane.margin>
+                                                            <Insets bottom="2.5" left="5.0" right="2.5" top="2.5" />
+                                                         </GridPane.margin>
+                                                      </TextField>
+                                                      <TextField editable="false" promptText="Man-Hours in hours" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                                                         <GridPane.margin>
+                                                            <Insets bottom="2.5" left="5.0" right="2.5" top="2.5" />
+                                                         </GridPane.margin>
+                                                      </TextField>
+                                                      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="285.0" text="Estimated Man Hours required: " textAlignment="RIGHT" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                                                      <TextField editable="false" promptText="Est. total number of hours" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                                                         <GridPane.margin>
+                                                            <Insets bottom="2.5" left="5.0" right="2.5" top="2.5" />
+                                                         </GridPane.margin>
+                                                      </TextField>
+                                                      <CheckBox disable="true" mnemonicParsing="false" onAction="#checkBoxChecker" prefHeight="17.0" prefWidth="222.0" text="Mark project as confidential" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                                                         <GridPane.margin>
+                                                            <Insets bottom="2.5" left="5.0" right="5.0" top="2.5" />
+                                                         </GridPane.margin>
+                                                      </CheckBox>
+                                                      <CheckBox fx:id="checkBox_AddToDashBoard" disable="true" mnemonicParsing="false" onAction="#checkBoxChecker" prefHeight="17.0" prefWidth="217.0" text="Track on Dashboard" textAlignment="CENTER" GridPane.columnIndex="6" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                                                         <GridPane.margin>
+                                                            <Insets bottom="2.5" left="5.0" right="2.5" top="2.5" />
+                                                         </GridPane.margin>
+                                                      </CheckBox>
+                                                   </children>
+                                                </GridPane>
+                                                <Label alignment="CENTER" minWidth="1130.0" text="Other Project Details:" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets bottom="5.0" top="5.0" />
+                                                   </padding>
+                                                </Label>
+                                                <GridPane fx:id="gridProjectDataContainer">
+                                                  <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="11.5" />
+                                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" percentWidth="15.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="15.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="5.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" percentWidth="15.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" percentWidth="15.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="15.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="5.0" prefWidth="100.0" />
+                                                      <ColumnConstraints />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="567.0" text="Customer Information:" textAlignment="CENTER" GridPane.columnSpan="3">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="285.0" text="Name:" textAlignment="RIGHT" GridPane.rowIndex="1" />
+                                                      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="65.0" prefHeight="17.0" prefWidth="285.0" text="Phone Number:" textAlignment="RIGHT" GridPane.rowIndex="2" />
+                                                      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="90.0" prefHeight="17.0" prefWidth="285.0" text="Email:" textAlignment="RIGHT" GridPane.rowIndex="3" />
+                                                      <TextField editable="false" promptText="first name" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                         <GridPane.margin>
+                                                            <Insets bottom="2.5" left="5.0" right="2.5" top="2.5" />
+                                                         </GridPane.margin>
+                                                      </TextField>
+                                                      <TextField editable="false" layoutX="299.0" layoutY="38.0" promptText="last name" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                         <GridPane.margin>
+                                                            <Insets bottom="2.5" left="2.5" right="5.0" top="2.5" />
+                                                         </GridPane.margin>
+                                                      </TextField>
+                                                      <TextField editable="false" layoutX="299.0" layoutY="68.0" promptText="Prefix (ie. +45)" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                         <GridPane.margin>
+                                                            <Insets bottom="2.5" left="5.0" right="2.5" top="2.5" />
+                                                         </GridPane.margin>
+                                                      </TextField>
+                                                      <TextField editable="false" layoutX="145.0" layoutY="63.0" promptText="Number (8 digits)" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                         <GridPane.margin>
+                                                            <Insets bottom="2.5" left="2.5" right="5.0" top="2.5" />
+                                                         </GridPane.margin>
+                                                      </TextField>
+                                                      <TextField editable="false" layoutX="299.0" layoutY="98.0" promptText="email" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                                                         <GridPane.margin>
+                                                            <Insets bottom="2.5" left="5.0" right="5.0" top="2.5" />
+                                                         </GridPane.margin>
+                                                      </TextField>
+                                                      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="132.0" prefHeight="17.0" prefWidth="285.0" text="Company Name:" textAlignment="RIGHT" GridPane.rowIndex="4" />
+                                                      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="162.0" prefHeight="17.0" prefWidth="285.0" text="Street:" textAlignment="RIGHT" GridPane.rowIndex="5" />
+                                                      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="192.0" prefHeight="17.0" prefWidth="285.0" text="Apartment:" textAlignment="RIGHT" GridPane.rowIndex="6" />
+                                                      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="222.0" prefHeight="17.0" prefWidth="285.0" text="City:" textAlignment="RIGHT" GridPane.rowIndex="7" />
+                                                      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="307.0" prefHeight="17.0" prefWidth="285.0" text="Country:" textAlignment="RIGHT" GridPane.rowIndex="8" />
+                                                      <TextField editable="false" layoutX="185.0" layoutY="123.0" promptText="Company Name the customer is representing" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4">
+                                                         <GridPane.margin>
+                                                            <Insets bottom="2.5" left="5.0" right="5.0" top="2.5" />
+                                                         </GridPane.margin>
+                                                      </TextField>
+                                                      <TextField editable="false" layoutX="185.0" layoutY="183.0" promptText="Customers Street Name" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                                         <GridPane.margin>
+                                                            <Insets bottom="2.5" left="5.0" right="2.5" top="2.5" />
+                                                         </GridPane.margin>
+                                                      </TextField>
+                                                      <TextField editable="false" layoutX="145.0" layoutY="153.0" promptText="Building number" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                                         <GridPane.margin>
+                                                            <Insets bottom="2.5" left="2.5" right="5.0" top="2.5" />
+                                                         </GridPane.margin>
+                                                      </TextField>
+                                                      <TextField editable="false" layoutX="185.0" layoutY="213.0" promptText="Customer apartment number, if applicable." GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="6">
+                                                         <GridPane.margin>
+                                                            <Insets bottom="2.5" left="5.0" right="5.0" top="2.5" />
+                                                         </GridPane.margin>
+                                                      </TextField>
+                                                      <TextField editable="false" layoutX="185.0" layoutY="243.0" promptText="ZIP code" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                                         <GridPane.margin>
+                                                            <Insets bottom="2.5" left="5.0" right="2.5" top="2.5" />
+                                                         </GridPane.margin>
+                                                      </TextField>
+                                                      <TextField editable="false" layoutX="185.0" layoutY="273.0" promptText="City" GridPane.columnIndex="2" GridPane.rowIndex="7">
+                                                         <GridPane.margin>
+                                                            <Insets bottom="2.5" left="2.5" right="5.0" top="2.5" />
+                                                         </GridPane.margin>
+                                                      </TextField>
+                                                      <TextField editable="false" layoutX="185.0" layoutY="303.0" promptText="Country" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="8">
+                                                         <GridPane.margin>
+                                                            <Insets bottom="2.5" left="5.0" right="5.0" top="2.5" />
+                                                         </GridPane.margin>
+                                                      </TextField>
+                                                      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="11.0" prefHeight="17.0" prefWidth="567.0" text="Project Information:" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.columnSpan="3">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="37.0" prefHeight="17.0" prefWidth="285.0" text="Project Name:" textAlignment="RIGHT" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                                                      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="535.0" layoutY="37.0" prefHeight="17.0" prefWidth="285.0" text="Project Description:" textAlignment="RIGHT" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                                                      <ScrollPane prefHeight="55.0" prefWidth="370.0" GridPane.columnIndex="5" GridPane.columnSpan="3" GridPane.rowIndex="2" GridPane.rowSpan="2">
+                                                        <content>
+                                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="55.0" prefWidth="383.0">
+                                                               <children>
+                                                                  <TextArea fx:id="taProjectDescription" editable="false" prefHeight="58.0" prefWidth="399.0" promptText="Enter a short project description. This information is exported and displayed on the company homepage" wrapText="true" />
+                                                               </children>
+                                                            </AnchorPane>
+                                                        </content>
+                                                         <GridPane.margin>
+                                                            <Insets bottom="2.5" left="5.0" right="5.0" top="2.5" />
+                                                         </GridPane.margin>
+                                                      </ScrollPane>
+                                                      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="535.0" layoutY="37.0" prefHeight="17.0" prefWidth="285.0" text="Project photo (if applicable):" textAlignment="RIGHT" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                                                      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.columnSpan="4" GridPane.rowIndex="4">
+                                                         <children>
+                                                            <Button alignment="CENTER" contentDisplay="CENTER" disable="true" mnemonicParsing="false" text="Select" />
+                                                            <Label prefHeight="17.0" prefWidth="335.0" text="No project picture selected. Using Default picture instead." textAlignment="CENTER">
+                                                               <padding>
+                                                                  <Insets left="10.0" />
+                                                               </padding>
+                                                            </Label>
+                                                         </children>
+                                                         <GridPane.margin>
+                                                            <Insets bottom="2.5" left="5.0" right="5.0" top="2.5" />
+                                                         </GridPane.margin>
+                                                      </HBox>
+                                                      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="535.0" layoutY="67.0" prefHeight="50.0" prefWidth="137.0" text="Project Managers comments:" textAlignment="RIGHT" wrapText="true" GridPane.rowIndex="9" GridPane.rowSpan="2" />
+                                                      <ScrollPane layoutX="705.0" layoutY="60.0" prefHeight="55.0" prefWidth="395.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="9" GridPane.rowSpan="2">
+                                                         <content>
+                                                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="55.0" prefWidth="389.0">
+                                                               <children>
+                                                                  <TextArea fx:id="taManagersComments" prefHeight="58.0" prefWidth="390.0" promptText="Enter any internal only notes directed towards the project manager" />
+                                                               </children>
+                                                            </AnchorPane>
+                                                         </content>
+                                                         <GridPane.margin>
+                                                            <Insets bottom="2.5" left="5.0" right="5.0" top="2.5" />
+                                                         </GridPane.margin>
+                                                      </ScrollPane>
+                                                      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="535.0" layoutY="247.0" prefHeight="17.0" prefWidth="285.0" text="Update project dates:" textAlignment="RIGHT" GridPane.columnIndex="4" GridPane.rowIndex="10" />
+                                                      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="535.0" layoutY="277.0" prefHeight="17.0" prefWidth="285.0" text="Street:" textAlignment="RIGHT" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                                                      <TextField editable="false" layoutX="145.0" layoutY="333.0" promptText="Project name. Will be displayed on homepage" GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                                                         <GridPane.margin>
+                                                            <Insets bottom="2.5" left="5.0" right="5.0" top="2.5" />
+                                                         </GridPane.margin>
+                                                      </TextField>
+                                                      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="11.0" prefHeight="17.0" prefWidth="695.0" text="Project Address:" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.columnSpan="4" GridPane.rowIndex="5">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField layoutX="145.0" layoutY="153.0" promptText="Street name" GridPane.columnIndex="5" GridPane.rowIndex="6">
+                                                         <GridPane.margin>
+                                                            <Insets bottom="2.5" left="5.0" right="2.5" top="2.5" />
+                                                         </GridPane.margin>
+                                                      </TextField>
+                                                      <TextField layoutX="312.0" layoutY="153.0" promptText="Property number" GridPane.columnIndex="6" GridPane.rowIndex="6">
+                                                         <GridPane.margin>
+                                                            <Insets bottom="2.5" left="2.5" right="5.0" top="2.5" />
+                                                         </GridPane.margin>
+                                                      </TextField>
+                                                      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="187.0" prefHeight="17.0" prefWidth="285.0" text="Apartment #:" textAlignment="RIGHT" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+                                                      <TextField layoutX="145.0" layoutY="183.0" promptText="Apartment number, if applicable. (else leave empty)" GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.rowIndex="7">
+                                                         <GridPane.margin>
+                                                            <Insets bottom="2.5" left="5.0" right="5.0" top="2.5" />
+                                                         </GridPane.margin>
+                                                      </TextField>
+                                                      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="217.0" prefHeight="17.0" prefWidth="285.0" text="City:" textAlignment="RIGHT" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+                                                      <TextField layoutX="145.0" layoutY="213.0" promptText="Project ZIP code" GridPane.columnIndex="5" GridPane.rowIndex="8">
+                                                         <GridPane.margin>
+                                                            <Insets bottom="2.5" left="5.0" right="2.5" top="2.5" />
+                                                         </GridPane.margin>
+                                                      </TextField>
+                                                      <TextField layoutX="312.0" layoutY="213.0" promptText="Project City" GridPane.columnIndex="6" GridPane.rowIndex="8">
+                                                         <GridPane.margin>
+                                                            <Insets bottom="2.5" left="2.5" right="5.0" top="2.5" />
+                                                         </GridPane.margin>
+                                                      </TextField>
+                                                      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="247.0" prefHeight="17.0" prefWidth="285.0" text="Country:" textAlignment="RIGHT" GridPane.columnIndex="4" GridPane.rowIndex="9" />
+                                                      <TextField layoutX="145.0" layoutY="243.0" promptText="Project Country" GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.rowIndex="9">
+                                                         <GridPane.margin>
+                                                            <Insets bottom="2.5" left="5.0" right="5.0" top="2.5" />
+                                                         </GridPane.margin>
+                                                      </TextField>
+                                                      <DatePicker fx:id="date_StartDateField" disable="true" editable="false" promptText="Start date" showWeekNumbers="true" GridPane.columnIndex="5" GridPane.rowIndex="10">
+                                                         <GridPane.margin>
+                                                            <Insets bottom="2.5" left="5.0" right="2.5" top="2.5" />
+                                                         </GridPane.margin>
+                                                      </DatePicker>
+                                                      <DatePicker fx:id="date_EndDateField" disable="true" editable="false" promptText="Est. Completion Date" showWeekNumbers="true" GridPane.columnIndex="6" GridPane.rowIndex="10">
+                                                         <GridPane.margin>
+                                                            <Insets bottom="2.5" left="2.5" right="5.0" top="2.5" />
+                                                         </GridPane.margin>
+                                                      </DatePicker>
+                                                   </children>
+                                                </GridPane>
+                                                <GridPane fx:id="gridResidentialUniqueData" layoutX="10.0" layoutY="270.0">
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" percentWidth="11.5" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" percentWidth="15.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="15.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="5.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" percentWidth="15.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" percentWidth="15.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="15.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="5.0" prefWidth="100.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                   <children>
+                                                      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="1089.0" text="Residential Specific Data:" textAlignment="CENTER" GridPane.columnSpan="8">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="298.0" text="Number of Bathrooms:" textAlignment="RIGHT" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                                                      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="65.0" prefHeight="17.0" prefWidth="299.0" text="Number of Kitchens" textAlignment="RIGHT" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                                                      <TextField fx:id="tResBathroomNumber" editable="false" promptText="Number of Bathrooms" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                         <GridPane.margin>
+                                                            <Insets bottom="2.5" left="5.0" right="2.5" top="2.5" />
+                                                         </GridPane.margin>
+                                                      </TextField>
+                                                      <TextField fx:id="tResNumberKitchens" editable="false" layoutX="299.0" layoutY="68.0" promptText="Number of Kitchens" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                         <GridPane.margin>
+                                                            <Insets bottom="2.5" left="5.0" right="2.5" top="2.5" />
+                                                         </GridPane.margin>
+                                                      </TextField>
+                                                      <TextField fx:id="tResNumberOfOtherPlumbing" editable="false" layoutX="299.0" layoutY="98.0" promptText="Other plumbing?" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                                         <GridPane.margin>
+                                                            <Insets bottom="2.5" left="5.0" right="5.0" top="2.5" />
+                                                         </GridPane.margin>
+                                                      </TextField>
+                                                      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="37.0" prefHeight="17.0" prefWidth="285.0" text="Project Duration" textAlignment="RIGHT" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                                                      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="535.0" layoutY="37.0" prefHeight="17.0" prefWidth="301.0" text="Number of other rooms with Plumbing" textAlignment="RIGHT" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                                                      <CheckBox fx:id="isRenovation" alignment="CENTER" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#checkBoxChecker" prefHeight="17.0" prefWidth="237.0" text="Is project a renovation?" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                                                         <GridPane.margin>
+                                                            <Insets bottom="2.5" left="5.0" right="5.0" top="2.5" />
+                                                         </GridPane.margin>
+                                                         <padding>
+                                                            <Insets left="50.0" />
+                                                         </padding>
+                                                      </CheckBox>
+                                                      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="535.0" layoutY="247.0" prefHeight="17.0" prefWidth="285.0" text="Building Size:" textAlignment="RIGHT" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                                                      <TextField fx:id="tResDuration" editable="false" layoutX="145.0" layoutY="333.0" promptText="Duration in months" GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                                                         <GridPane.margin>
+                                                            <Insets bottom="2.5" left="5.0" right="5.0" top="2.5" />
+                                                         </GridPane.margin>
+                                                      </TextField>
+                                                      <TextField fx:id="tResBuildingSize" editable="false" layoutX="711.0" layoutY="33.0" promptText="in m^2" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                                                         <GridPane.margin>
+                                                            <Insets bottom="2.5" left="5.0" right="5.0" top="2.5" />
+                                                         </GridPane.margin>
+                                                      </TextField>
+                                                      <Label alignment="BOTTOM_LEFT" layoutX="10.0" layoutY="217.0" prefHeight="17.0" prefWidth="285.0" text=" m^2" textAlignment="RIGHT" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                                                   </children>
+                                                </GridPane>
+                                                <GridPane fx:id="gridCommercialUniqueData" layoutX="10.0" layoutY="620.0">
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" percentWidth="11.5" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" percentWidth="15.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="15.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="5.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" percentWidth="15.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" percentWidth="15.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="15.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="5.0" prefWidth="100.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                   <children>
+                                                      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="1089.0" text="Commercial Specific Data:" textAlignment="CENTER" GridPane.columnSpan="8">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="298.0" text="Number of Floors:" textAlignment="RIGHT" GridPane.rowIndex="1" />
+                                                      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="65.0" prefHeight="17.0" prefWidth="299.0" text="Intended building use:" textAlignment="RIGHT" GridPane.rowIndex="2" />
+                                                      <TextField fx:id="tComNumberFloors" editable="false" promptText="Number of floors" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                         <GridPane.margin>
+                                                            <Insets bottom="2.5" left="5.0" right="2.5" top="2.5" />
+                                                         </GridPane.margin>
+                                                      </TextField>
+                                                      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="37.0" prefHeight="17.0" prefWidth="285.0" text="Project Duration" textAlignment="RIGHT" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                                                      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="535.0" layoutY="247.0" prefHeight="17.0" prefWidth="285.0" text="Building Size:" textAlignment="RIGHT" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                                                      <TextField fx:id="tComDuration" editable="false" layoutX="145.0" layoutY="333.0" promptText="Duration in months" GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                                                         <GridPane.margin>
+                                                            <Insets bottom="2.5" left="5.0" right="5.0" top="2.5" />
+                                                         </GridPane.margin>
+                                                      </TextField>
+                                                      <TextField fx:id="tComBuildingSize" editable="false" layoutX="711.0" layoutY="33.0" promptText="in m^2" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                                                         <GridPane.margin>
+                                                            <Insets bottom="2.5" left="5.0" right="5.0" top="2.5" />
+                                                         </GridPane.margin>
+                                                      </TextField>
+                                                      <Label alignment="BOTTOM_LEFT" layoutX="10.0" layoutY="217.0" prefHeight="17.0" prefWidth="285.0" text=" m^2" textAlignment="RIGHT" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                                                      <ScrollPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" GridPane.rowSpan="2">
+                                                         <content>
+                                                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="55.0" prefWidth="303.0">
+                                                               <children>
+                                                                  <TextArea fx:id="taComIntendedUse" editable="false" prefHeight="58.0" prefWidth="315.0" promptText="Describe the intended use of the building" wrapText="true" />
+                                                               </children>
+                                                            </AnchorPane>
+                                                         </content>
+                                                         <GridPane.margin>
+                                                            <Insets bottom="2.5" left="5.0" right="5.0" top="2.5" />
+                                                         </GridPane.margin>
+                                                      </ScrollPane>
+                                                   </children>
+                                                </GridPane>
+                                                <GridPane fx:id="gridIndustrialUniqueData" layoutX="10.0" layoutY="730.0">
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" percentWidth="11.5" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" percentWidth="15.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="15.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="5.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" percentWidth="15.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" percentWidth="15.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="15.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="5.0" prefWidth="100.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                   <children>
+                                                      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="1089.0" text="Industrial Specific Data:" textAlignment="CENTER" GridPane.columnSpan="8">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="65.0" prefHeight="17.0" prefWidth="299.0" text="Facility Type:" textAlignment="RIGHT" GridPane.rowIndex="2" />
+                                                      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="37.0" prefHeight="17.0" prefWidth="285.0" text="Project Duration" textAlignment="RIGHT" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                                                         <GridPane.margin>
+                                                            <Insets bottom="5.0" />
+                                                         </GridPane.margin>
+                                                      </Label>
+                                                      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="535.0" layoutY="247.0" prefHeight="17.0" prefWidth="285.0" text="Facility Size:" textAlignment="RIGHT" GridPane.rowIndex="1">
+                                                         <GridPane.margin>
+                                                            <Insets bottom="5.0" />
+                                                         </GridPane.margin>
+                                                      </Label>
+                                                      <TextField fx:id="tIndDuration" editable="false" layoutX="145.0" layoutY="333.0" promptText="Duration in months" GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                                                         <GridPane.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="2.5" />
+                                                         </GridPane.margin>
+                                                      </TextField>
+                                                      <TextField fx:id="tIndFacilitySize" editable="false" layoutX="711.0" layoutY="33.0" promptText="in m^2" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                         <GridPane.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="2.5" />
+                                                         </GridPane.margin>
+                                                      </TextField>
+                                                      <Label alignment="BOTTOM_LEFT" layoutX="10.0" layoutY="217.0" prefHeight="17.0" prefWidth="285.0" text=" m^2" textAlignment="RIGHT" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                                      <ScrollPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="6" GridPane.rowIndex="2">
+                                                         <content>
+                                                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="73.0" prefWidth="875.0">
+                                                               <children>
+                                                                  <TextArea fx:id="taIndFacilityType" editable="false" prefHeight="30.0" prefWidth="877.0" promptText="Describe the intended use of the facility" wrapText="true" />
+                                                               </children>
+                                                            </AnchorPane>
+                                                         </content>
+                                                         <GridPane.margin>
+                                                            <Insets bottom="2.5" left="5.0" right="5.0" top="5.0" />
+                                                         </GridPane.margin>
+                                                      </ScrollPane>
+                                                   </children>
+                                                </GridPane>
+                                                <GridPane fx:id="gridRoadUniqueData" layoutX="10.0" layoutY="620.0">
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" percentWidth="11.5" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" percentWidth="15.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="15.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="5.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" percentWidth="15.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" percentWidth="15.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="15.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="5.0" prefWidth="100.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                   <children>
+                                                      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="1089.0" text="Road Specific Data:" textAlignment="CENTER" GridPane.columnSpan="4">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="298.0" text="Road length (meters):" textAlignment="RIGHT" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                                                      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="65.0" prefHeight="17.0" prefWidth="299.0" text="Road width (meters):" textAlignment="RIGHT" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                                                      <TextField fx:id="tRDLength" editable="false" promptText="length in meters" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                         <GridPane.margin>
+                                                            <Insets bottom="2.5" left="5.0" right="2.5" top="2.5" />
+                                                         </GridPane.margin>
+                                                      </TextField>
+                                                      <TextField fx:id="tRDWidth" editable="false" layoutX="299.0" layoutY="68.0" promptText="width in meters" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                         <GridPane.margin>
+                                                            <Insets bottom="2.5" left="5.0" right="2.5" top="2.5" />
+                                                         </GridPane.margin>
+                                                      </TextField>
+                                                      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="37.0" prefHeight="17.0" prefWidth="285.0" text="Project Duration:" textAlignment="RIGHT" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                      <TextField fx:id="tRDDuration" editable="false" layoutX="145.0" layoutY="333.0" promptText="Duration in months" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                                         <GridPane.margin>
+                                                            <Insets bottom="2.5" left="5.0" right="2.5" top="2.5" />
+                                                         </GridPane.margin>
+                                                      </TextField>
+                                                      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="285.0" text="Info about bridges or tunnels:" textAlignment="RIGHT" GridPane.columnIndex="4" />
+                                                      <ScrollPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.rowSpan="2">
+                                                         <content>
+                                                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="67.0" prefWidth="313.0">
+                                                               <children>
+                                                                  <TextArea fx:id="taRDBridgeTunnelInfo" editable="false" prefHeight="58.0" prefWidth="324.0" promptText="Type any relevant information about bridges or tunnels" wrapText="true" />
+                                                               </children>
+                                                            </AnchorPane>
+                                                         </content>
+                                                         <GridPane.margin>
+                                                            <Insets bottom="2.5" left="5.0" right="2.5" top="2.5" />
+                                                         </GridPane.margin>
+                                                      </ScrollPane>
+                                                      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="535.0" layoutY="37.0" prefHeight="17.0" prefWidth="285.0" text="Geographic/Environment info:" textAlignment="RIGHT" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                                                      <ScrollPane layoutX="711.0" layoutY="13.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.rowIndex="2" GridPane.rowSpan="2">
+                                                         <content>
+                                                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="67.0" prefWidth="313.0">
+                                                               <children>
+                                                                  <TextArea fx:id="taRDEnvironmentInfo" editable="false" prefHeight="58.0" prefWidth="324.0" promptText="Type any relevant environmental or geographical information" wrapText="true" />
+                                                               </children>
+                                                            </AnchorPane>
+                                                         </content>
+                                                         <GridPane.margin>
+                                                            <Insets bottom="2.5" left="5.0" right="2.5" top="2.5" />
+                                                         </GridPane.margin>
+                                                      </ScrollPane>
+                                                   </children>
+                                                </GridPane>
+                                                <HBox alignment="CENTER" prefHeight="30.0" prefWidth="900.0">
+                                                   <children>
+                                                      <Button fx:id="buttonCancel" cancelButton="true" focusTraversable="false" layoutX="10.0" layoutY="10.0" maxHeight="30.0" maxWidth="120.0" minHeight="30.0" minWidth="120.0" mnemonicParsing="false" onAction="#returnToPreviousView" prefHeight="30.0" prefWidth="120.0" text="Cancel" textAlignment="CENTER">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="25.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                   </children>
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="15.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children></AnchorPane>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="37.0" prefWidth="1024.0">
+                     <children>
+                        <Label text="Console:" HBox.hgrow="NEVER">
+                           <HBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="GUI_Console" editable="false" focusTraversable="false" prefHeight="17.0" prefWidth="952.0" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="2.5" top="2.5" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="BOTTOM_CENTER" prefHeight="32.0" prefWidth="1004.0" VBox.vgrow="NEVER">
+                     <children>
+                        <Label prefHeight="27.0" prefWidth="509.0" text="Developed by 1st Semester Students at VIA University College, Denmark, on the Danish Software Engineering course.              Developers are: Z. Banouri, A. Özer, E. Kadrolli &amp; K. Dashnaw" wrapText="true" HBox.hgrow="NEVER">
+                           <font>
+                              <Font size="9.0" />
+                           </font></Label>
+                        <VBox alignment="TOP_RIGHT" prefHeight="32.0" prefWidth="843.0" HBox.hgrow="NEVER">
+                           <children>
+                              <Label fx:id="labelLastProjectSave" prefHeight="13.0" prefWidth="193.0" text="Project file version: (DD/MM/YYYY - HH:MM)">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font></Label>
+                              <Label fx:id="labelHTMLExportDate" layoutX="286.0" layoutY="10.0" prefHeight="19.0" prefWidth="194.0" text="Last HTML export : (DD/MM/YYYY - HH:MM)">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font></Label>
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="2.5" left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+      </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+    </AnchorPane>
+  </children>
+</VBox>

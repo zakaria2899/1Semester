@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox minHeight="250.0" minWidth="800.0" prefHeight="300.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sep1a233group.bobsprojectmanagementsystem.SubScene_QuickUpdateProjectView">
+  <children>
+      <VBox alignment="TOP_CENTER" minHeight="250.0" minWidth="700.0" prefHeight="250.0" prefWidth="800.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="45.0" text="Quick update">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="882.0">
+               <children>
+                  <GridPane fx:id="gridCommonProjectDataContainer" alignment="CENTER" layoutX="10.0" layoutY="387.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" percentWidth="15.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="15.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="5.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" percentWidth="15.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" percentWidth="15.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="20.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="60.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <TextField onKeyReleased="#validate_NotEmpty_NotString_NotNegative" promptText="Expenses in USD" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="2.5" left="5.0" right="2.5" top="2.5" />
+                           </GridPane.margin>
+                        </TextField>
+                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="535.0" layoutY="37.0" prefHeight="17.0" prefWidth="301.0" text="Man-Hours spent:" textAlignment="RIGHT" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                        <CheckBox contentDisplay="CENTER" mnemonicParsing="false" onAction="#checkBoxChecker" prefHeight="17.0" prefWidth="189.0" text="Mark project as completed" textAlignment="CENTER" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets bottom="2.5" left="5.0" right="5.0" top="2.5" />
+                           </GridPane.margin>
+                        </CheckBox>
+                        <TextField onKeyReleased="#validate_NotEmpty_NotString_NotNegative" promptText="Budget in USD" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets bottom="2.5" left="5.0" right="2.5" top="2.5" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField onKeyReleased="#validate_NotEmpty_NotString_NotNegative" promptText="Man-Hours in hours" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="2.5" left="5.0" right="2.5" top="2.5" />
+                           </GridPane.margin>
+                        </TextField>
+                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="301.0" text="Estimated Man Hours required: " textAlignment="RIGHT" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                        <TextField onKeyReleased="#validate_NotEmpty_NotString_NotNegative" promptText="Est. total number of hours" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets bottom="2.5" left="5.0" right="2.5" top="2.5" />
+                           </GridPane.margin>
+                        </TextField>
+                        <CheckBox mnemonicParsing="false" onAction="#checkBoxChecker" prefHeight="17.0" prefWidth="222.0" text="Mark project as confidential" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets bottom="2.5" left="5.0" right="5.0" top="2.5" />
+                           </GridPane.margin>
+                        </CheckBox>
+                        <CheckBox fx:id="checkBox_AddToDashBoard" mnemonicParsing="false" onAction="#checkBoxChecker" prefHeight="17.0" prefWidth="217.0" text="Track on Dashboard" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets bottom="2.5" left="5.0" right="2.5" top="2.5" />
+                           </GridPane.margin>
+                        </CheckBox>
+                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="360.0" layoutY="47.0" prefHeight="17.0" prefWidth="301.0" text="Materiel expenses" textAlignment="RIGHT" GridPane.rowIndex="1" />
+                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="360.0" layoutY="47.0" prefHeight="17.0" prefWidth="301.0" text="Budget" textAlignment="RIGHT" GridPane.rowIndex="2" />
+                     </children>
+                  </GridPane>
+                  <HBox alignment="CENTER" prefHeight="30.0" prefWidth="1029.0">
+                     <children>
+                        <Button fx:id="buttonEditProject" focusTraversable="false" maxHeight="30.0" maxWidth="120.0" minHeight="30.0" minWidth="120.0" mnemonicParsing="false" onAction="#editProject" prefHeight="30.0" prefWidth="120.0" text="Save Changes" textAlignment="CENTER">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="25.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="buttonCancel" cancelButton="true" focusTraversable="false" layoutX="10.0" layoutY="10.0" maxHeight="30.0" maxWidth="120.0" minHeight="30.0" minWidth="120.0" mnemonicParsing="false" onAction="#createPromptWindow" prefHeight="30.0" prefWidth="120.0" text="Cancel" textAlignment="CENTER">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="25.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="37.0" prefWidth="500.0">
+         <children>
+            <Label minWidth="50.0" prefHeight="16.0" prefWidth="35.0" text="Console:" HBox.hgrow="NEVER">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField fx:id="GUI_Console" editable="false" focusTraversable="false" prefHeight="25.0" prefWidth="800.0" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+         <VBox.margin>
+            <Insets bottom="2.5" top="2.5" />
+         </VBox.margin>
+      </HBox>
+  </children>
+</VBox>
